@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>612</width>
-    <height>525</height>
+    <width>572</width>
+    <height>345</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QPushButton" name="pushButton_fileopen">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
+     <x>30</x>
+     <y>50</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -32,8 +32,8 @@
   <widget class="QPushButton" name="pushButton_keyword3">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>10</y>
+     <x>400</x>
+     <y>50</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -45,8 +45,8 @@
   <widget class="QPushButton" name="pushButton_keyword1">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>10</y>
+     <x>230</x>
+     <y>50</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -58,8 +58,8 @@
   <widget class="QPushButton" name="pushButton_keyword2">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>10</y>
+     <x>320</x>
+     <y>50</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -71,8 +71,8 @@
   <widget class="QPushButton" name="pushButton_version">
    <property name="geometry">
     <rect>
-     <x>359</x>
-     <y>380</y>
+     <x>320</x>
+     <y>300</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -84,8 +84,8 @@
   <widget class="QPushButton" name="pushButton_close">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>380</y>
+     <x>410</x>
+     <y>300</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -94,12 +94,22 @@
     <string>关闭</string>
    </property>
   </widget>
+  <widget class="QListView" name="listView_filenames">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>90</y>
+     <width>101</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QLabel" name="label_status">
    <property name="geometry">
     <rect>
-     <x>31</x>
-     <y>391</y>
-     <width>36</width>
+     <x>30</x>
+     <y>310</y>
+     <width>271</width>
      <height>16</height>
     </rect>
    </property>
@@ -110,20 +120,10 @@
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>50</y>
-     <width>271</width>
-     <height>311</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListWidget" name="listWidget_filenames">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>50</y>
-     <width>281</width>
-     <height>311</height>
+     <x>220</x>
+     <y>100</y>
+     <width>261</width>
+     <height>171</height>
     </rect>
    </property>
   </widget>
