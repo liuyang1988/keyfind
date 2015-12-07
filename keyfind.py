@@ -78,4 +78,3 @@ if __name__ == "__main__":
     dlg = KeyFind()
     dlg.show()
     sys.exit(app.exec_())
-
