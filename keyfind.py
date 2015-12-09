@@ -4,7 +4,7 @@
 Module implementing KeyFind.
 """
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, QModelIndex
 from PyQt5.QtWidgets import QDialog
 #pp
 from PyQt5.QtWidgets import QFileDialog
@@ -36,41 +36,55 @@ class KeyFind(QDialog, Ui_Dialog):
                                  "search files", 
                                  "C:/Python34",
                                  "All files(*);;Text files(*.txt)")
-                                 
-        print(files, ok1)
-        print(files)
-    @pyqtSlot()
-    def on_pushButton_keyword3_clicked(self):
-        """
-        Slot documentation goes here.
-        """
-        # TODO: not implemented yet
-        raise NotImplementedError
-    
-    @pyqtSlot()
-    def on_pushButton_keyword1_clicked(self):
-        """
-        Slot documentation goes here.
-        """
-        # TODO: not implemented yet
-        raise NotImplementedError
-    
-    @pyqtSlot()
-    def on_pushButton_keyword2_clicked(self):
-        """
-        Slot documentation goes here.
-        """
-        # TODO: not implemented yet
-        raise NotImplementedError
-    
-    @pyqtSlot()
-    def on_pushButton_version_clicked(self):
-        """
-        Slot documentation goes here.
-        """
-        # TODO: not implemented yet
-        self.label_status.setText("curren version 1.0")
+        print (files)
+        #将选中的文件名加入listWidget中
+        self.listWidget_filenames.addItems(files)
         
+     #后续这段代码并没有什么用，需要删除                        
+    @pyqtSlot(QModelIndex)
+    def on_listWidget_filenames_clicked(self, index):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        #raise NotImplementedError
+        print ("hello")
+        row = self.listWidget_filenames.currentRow()
+        currentfile = self.listWidget_filenames.item(row).text()
+        print (currentfile)   
+        
+     # 对选择的文件进行关键字查找，关键字在程序中定义好。12092015
+    @pyqtSlot()
+    def on_pushButton_searchsinglefile_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        #raise NotImplementedError
+        print("i am a push button search single")
+        row = self.listWidget_filenames.currentRow()
+        currentfile = self.listWidget_filenames.item(row).text()
+        print (currentfile)   
+       #打开currentfile,进行关键字查找
+ 
+    @pyqtSlot()       
+    def on_pushButton_searchmiltfiles_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+    
+    @pyqtSlot()
+    def on_pushButton_openselectfile_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+        
+        
+#add by pp        to show windows and run
 if __name__ == "__main__":
     import sys
     from PyQt5.QtWidgets import QApplication
@@ -78,3 +92,5 @@ if __name__ == "__main__":
     dlg = KeyFind()
     dlg.show()
     sys.exit(app.exec_())
+    
+ 
