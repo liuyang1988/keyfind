@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(800, 457)
+        Dialog.resize(790, 457)
         Dialog.setSizeGripEnabled(True)
         Dialog.setModal(False)
         self.pushButton_fileopen = QtWidgets.QPushButton(Dialog)
@@ -35,16 +35,18 @@ class Ui_Dialog(object):
         self.label_status = QtWidgets.QLabel(Dialog)
         self.label_status.setGeometry(QtCore.QRect(10, 430, 491, 16))
         self.label_status.setObjectName("label_status")
-        self.textEdit = QtWidgets.QTextEdit(Dialog)
-        self.textEdit.setGeometry(QtCore.QRect(400, 50, 271, 171))
-        self.textEdit.setObjectName("textEdit")
+        self.textEdit_sr_show = QtWidgets.QTextEdit(Dialog)
+        self.textEdit_sr_show.setGeometry(QtCore.QRect(400, 50, 381, 171))
+        self.textEdit_sr_show.setObjectName("textEdit_sr_show")
         self.listWidget_filenames = QtWidgets.QListWidget(Dialog)
         self.listWidget_filenames.setGeometry(QtCore.QRect(10, 50, 281, 341))
+        self.listWidget_filenames.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
         self.listWidget_filenames.setResizeMode(QtWidgets.QListView.Fixed)
         self.listWidget_filenames.setObjectName("listWidget_filenames")
-        self.listWidget = QtWidgets.QListWidget(Dialog)
-        self.listWidget.setGeometry(QtCore.QRect(400, 240, 271, 151))
-        self.listWidget.setObjectName("listWidget")
+        self.listWidget_sr_show = QtWidgets.QListWidget(Dialog)
+        self.listWidget_sr_show.setGeometry(QtCore.QRect(400, 240, 381, 151))
+        self.listWidget_sr_show.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
+        self.listWidget_sr_show.setObjectName("listWidget_sr_show")
 
         self.retranslateUi(Dialog)
         self.pushButton_close.clicked.connect(Dialog.close)
@@ -60,6 +62,7 @@ class Ui_Dialog(object):
         self.pushButton_version.setText(_translate("Dialog", "版本信息"))
         self.pushButton_close.setText(_translate("Dialog", "关闭"))
         self.label_status.setText(_translate("Dialog", "状态栏"))
+        self.listWidget_filenames.setSortingEnabled(True)
 
 
 if __name__ == "__main__":

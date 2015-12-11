@@ -7,6 +7,7 @@ Module implementing KeyFind.
 from PyQt5.QtCore import pyqtSlot, QModelIndex
 from PyQt5.QtWidgets import QDialog
 #pp
+from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import QFileDialog
 
 from Ui_keyfind import Ui_Dialog
@@ -61,11 +62,30 @@ class KeyFind(QDialog, Ui_Dialog):
         """
         # TODO: not implemented yet
         #raise NotImplementedError
-        print("i am a push button search single")
+        print("now seaech the selected file by keyword")
         row = self.listWidget_filenames.currentRow()
         currentfile = self.listWidget_filenames.item(row).text()
         print (currentfile)   
        #打开currentfile,进行关键字查找
+        import re
+        f = open(currentfile,'r')
+        keyword1= re.compile('ddd[a-e] \d{4}')
+        keyword2 = re.compile('\.\S{6}[AS]')
+        
+        #进行正则表达式的匹配
+        for line in f:
+            rs1 = keyword1.findall(line)
+            if rs1:
+                print(rs1)
+                self.listWidget_sr_show.addItems(rs1)
+                
+                
+            rs2 = keyword2.findall(line)
+            if rs2:
+                print(rs2)
+                self.listWidget_sr_show.addItems(rs2)
+           
+
  
     @pyqtSlot()       
     def on_pushButton_searchmiltfiles_clicked(self):
@@ -73,7 +93,31 @@ class KeyFind(QDialog, Ui_Dialog):
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        raise NotImplementedError
+        #raise NotImplementedError
+        #pp 正则表达式，或许可以移到init中
+        import re
+        keyword1= re.compile('ddd[a-e] \d{4}')
+        keyword2 = re.compile('\.\S{6}[AS]')
+        
+        filenames = self.listWidget_filenames.currentItem() 
+        row = self.listWidget_filenames.currentRow()
+        currentfile = self.listWidget_filenames.item(row).text()
+        print (currentfile)
+        ###
+        print (filenames)
+        for f  in open(filenames, 'r'):
+            for line in f:
+                rs1 = keyword1.findall(line)
+                if rs1:
+                  print(rs1)
+                self.listWidget_sr_show.addItems(rs1)
+                
+                
+                rs2 = keyword2.findall(line)
+                if rs2:
+                   print(rs2)
+                   self.listWidget_sr_show.addItems(rs2) 
+        ###
     
     @pyqtSlot()
     def on_pushButton_openselectfile_clicked(self):
@@ -81,8 +125,27 @@ class KeyFind(QDialog, Ui_Dialog):
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        raise NotImplementedError
+        #raise NotImplementedError
+        print("now open the selected file in textedit")
+        row = self.listWidget_filenames.currentRow()
+        currentfile = self.listWidget_filenames.item(row).text()
+        print (currentfile)   
+       #打开currentfile,进行关键字查找
+        file = QtCore.QFile(currentfile)
+        if not file.open(QtCore.QIODevice.ReadOnly):
+            QtGui.QMessageBox.information(None, 'info', file.errorString())
+        stream = QtCore.QTextStream(file)
+        self.textEdit_sr_show.setText(stream.readAll())
         
+    @pyqtSlot()
+    def on_pushButton_version_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        #raise NotImplementedError
+        self.label_status.setText("current version 1.0")
+       
         
 #add by pp        to show windows and run
 if __name__ == "__main__":

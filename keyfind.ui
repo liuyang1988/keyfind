@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>790</width>
     <height>457</height>
    </rect>
   </property>
@@ -110,12 +110,12 @@
     <string>状态栏</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="textEdit_sr_show">
    <property name="geometry">
     <rect>
      <x>400</x>
      <y>50</y>
-     <width>271</width>
+     <width>381</width>
      <height>171</height>
     </rect>
    </property>
@@ -129,18 +129,27 @@
      <height>341</height>
     </rect>
    </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::MultiSelection</enum>
+   </property>
    <property name="resizeMode">
     <enum>QListView::Fixed</enum>
    </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
   </widget>
-  <widget class="QListWidget" name="listWidget">
+  <widget class="QListWidget" name="listWidget_sr_show">
    <property name="geometry">
     <rect>
      <x>400</x>
      <y>240</y>
-     <width>271</width>
+     <width>381</width>
      <height>151</height>
     </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::MultiSelection</enum>
    </property>
   </widget>
  </widget>

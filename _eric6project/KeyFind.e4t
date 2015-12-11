@@ -1,52 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-5.1.dtd">
 <!-- eric6 tasks file for project KeyFind -->
-<!-- Saved: 2015-12-09, 10:07:57 -->
+<!-- Saved: 2015-12-11, 12:26:29 -->
 <Tasks version="5.1">
   <ProjectScanFilter></ProjectScanFilter>
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2015-12-09, 10:07:54</Created>
+    <Created>2015-12-11, 12:26:26</Created>
     <Resource>
       <Filename>keyfind.py</Filename>
-      <Linenumber>33</Linenumber>
+      <Linenumber>34</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2015-12-09, 10:07:54</Created>
+    <Created>2015-12-11, 12:26:26</Created>
     <Resource>
       <Filename>keyfind.py</Filename>
-      <Linenumber>49</Linenumber>
+      <Linenumber>50</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2015-12-09, 10:07:54</Created>
+    <Created>2015-12-11, 12:26:26</Created>
     <Resource>
       <Filename>keyfind.py</Filename>
-      <Linenumber>62</Linenumber>
+      <Linenumber>63</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2015-12-09, 10:07:54</Created>
+    <Created>2015-12-11, 12:26:26</Created>
     <Resource>
       <Filename>keyfind.py</Filename>
-      <Linenumber>75</Linenumber>
+      <Linenumber>95</Linenumber>
     </Resource>
   </Task>
   <Task priority="1" completed="False" type="1">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2015-12-09, 10:07:54</Created>
+    <Created>2015-12-11, 12:26:26</Created>
     <Resource>
       <Filename>keyfind.py</Filename>
-      <Linenumber>83</Linenumber>
+      <Linenumber>127</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2015-12-11, 12:26:26</Created>
+    <Resource>
+      <Filename>keyfind.py</Filename>
+      <Linenumber>145</Linenumber>
     </Resource>
   </Task>
 </Tasks>
